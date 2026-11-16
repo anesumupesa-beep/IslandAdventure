@@ -1,0 +1,54 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Admin Portal - Island Escape Adventures</title>
+    <link href="~/Content/bootstrap.min.css" runat="server" rel="stylesheet" />
+    <link href="~/Content/styles.css" runat="server" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    <style>
+        .admin-sidebar { min-height: 100vh; background-color: #17323a; }
+        .admin-sidebar .nav-link { color: #d7e5e5; border-radius: 6px; }
+        .admin-sidebar .nav-link:hover, .admin-sidebar .nav-link.active { color: #fff; background-color: #006d77; }
+    </style>
+</head>
+<body class="bg-light">
+<form id="frmAdmin" runat="server">
+<div class="d-flex">
+    <div class="admin-sidebar p-3" style="width:230px; min-width:230px;">
+        <h5 class="text-white fw-bold mb-4">Admin Portal</h5>
+        <nav class="nav flex-column gap-1">
+            <a class="nav-link" href="~/Admin/Default.aspx" runat="server">Dashboard</a>
+            <a class="nav-link" href="~/Admin/ManagePackages.aspx" runat="server">Packages</a>
+            <a class="nav-link" href="~/Admin/ManageUsers.aspx" runat="server">Users</a>
+            <a class="nav-link" href="~/Admin/ManageQueries.aspx" runat="server">Queries</a>
+            <hr class="border-secondary" />
+            <a class="nav-link" href="~/Default.aspx" runat="server">View Site</a>
+            <asp:LinkButton ID="lbtnAdminLogout" runat="server" CssClass="nav-link text-warning" OnClick="lbtnAdminLogout_Click">Logout</asp:LinkButton>
+        </nav>
+    </div>
+
+    <div class="flex-grow-1 p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="mb-0"><asp:ContentPlaceHolder ID="PageTitle" runat="server">Admin</asp:ContentPlaceHolder></h4>
+            <span class="text-muted small">Logged in as: <strong><asp:Label ID="lblAdminName" runat="server" /></strong></span>
+        </div>
+
+        <asp:Panel ID="pnlFlash" runat="server" Visible="false" CssClass="mb-3">
+            <asp:Label ID="lblFlash" runat="server" CssClass="alert d-block" />
+        </asp:Panel>
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+</div>
+</form>
+
+<script src="<%=ResolveUrl("~/Scripts/jquery.min.js") %>"></script>
+<script src="<%=ResolveUrl("~/Scripts/bootstrap.bundle.min.js") %>"></script>
+<asp:ContentPlaceHolder ID="ScriptsContent" runat="server" />
+</body>
+</html>

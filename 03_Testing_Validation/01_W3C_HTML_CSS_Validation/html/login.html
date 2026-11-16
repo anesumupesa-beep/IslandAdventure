@@ -1,0 +1,229 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>
+	Login
+</title>
+
+    <!-- Bootstrap 5 (local) -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="Content/styles.css" rel="stylesheet" /></head>
+<body>
+    <form method="post" action="./Login.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="frmMain">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="[redacted]" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="[redacted]" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="[redacted]" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmMain'];
+if (!theForm) {
+    theForm = document.frmMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZKAgilXIPM8WzbNqaEku--kzlGL9M9ZorrSFwVoqDj95S2kTqxVrpDfRpedE7aM-iQ2&amp;t=638914508334897068" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=x2nkrMJGXkMELz33nwnakCpzbaItQRWX40rGjyovohox3VuBOF6cC-bVInyomE_ywd4rCM8KeeqgOGoH09xw7avg5eoB4VEKNpNImLVsBYE1&amp;t=638914508334897068" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="[redacted]" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="[redacted]" />
+</div>
+
+        <!-- Navigation -->
+        
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a href="Default.aspx" class="navbar-brand fw-bold">
+            Island Escape Adventures
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a href="Default.aspx" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="Packages.aspx" class="nav-link">Packages</a></li>
+                <li class="nav-item"><a href="Contact.aspx" class="nav-link">Contact</a></li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item me-2">
+                    <a href="Cart.aspx" class="nav-link position-relative">
+                        Cart
+                        
+                    </a>
+                </li>
+
+                
+                    <li class="nav-item"><a href="Login.aspx" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="Register.aspx" class="btn btn-warning btn-sm ms-2">Register</a></li>
+                
+
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+        <!-- Flash messages (set via Session) -->
+        
+
+        <!-- Page content -->
+        <main>
+            
+<div class="container">
+    <div class="auth-card card p-4">
+        <h3 class="text-center mb-1 fw-bold">Welcome Back</h3>
+        <p class="text-center text-muted mb-4">Login to your Island Escape account</p>
+
+        
+
+        <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input name="ctl00$MainContent$txtEmail" type="email" id="MainContent_txtEmail" class="form-control" placeholder="you@example.com" />
+            <span id="MainContent_ctl00" class="text-danger small" style="display:none;">Email is required.</span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input name="ctl00$MainContent$txtPassword" type="password" id="MainContent_txtPassword" class="form-control" placeholder="Your password" />
+            <span id="MainContent_ctl01" class="text-danger small" style="display:none;">Password is required.</span>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="form-check">
+                <span class="form-check-input"><input id="MainContent_chkRemember" type="checkbox" name="ctl00$MainContent$chkRemember" /></span>
+                <label class="form-check-label small">Remember me</label>
+            </div>
+            <a href="ForgotPassword.aspx" class="small">Forgot password?</a>
+        </div>
+
+        <input type="submit" name="ctl00$MainContent$btnLogin" value="Login" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnLogin" class="btn btn-primary w-100" />
+
+        <p class="text-center mt-3 small">
+            Don't have an account? <a href="Register.aspx">Register here</a>
+        </p>
+    </div>
+</div>
+
+        </main>
+
+        <!-- Footer -->
+        
+
+<footer class="bg-dark text-white mt-5 py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="fw-bold h5">Island Escape Adventures</div>
+                <p class="text-muted small">Your gateway to unforgettable Mauritius experiences. Hotels, dining, excursions and more - all in one place.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="fw-bold h6">Quick Links</div>
+                <ul class="list-unstyled small">
+                    <li><a href="Default.aspx" class="text-muted text-decoration-none">Home</a></li>
+                    <li><a href="Packages.aspx" class="text-muted text-decoration-none">Packages</a></li>
+                    <li><a href="Contact.aspx" class="text-muted text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="fw-bold h6">Contact</div>
+                <p class="text-muted small">
+                    Port Louis, Mauritius<br />
+                    +230 5900 1234<br />
+                    info@islandescape.mu
+                </p>
+            </div>
+        </div>
+        <hr class="border-secondary" />
+        <p class="text-center text-muted small mb-0">
+            &copy; 2026 Island Escape Adventures. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("MainContent_ctl00"), document.getElementById("MainContent_ctl01"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var MainContent_ctl00 = document.all ? document.all["MainContent_ctl00"] : document.getElementById("MainContent_ctl00");
+MainContent_ctl00.controltovalidate = "MainContent_txtEmail";
+MainContent_ctl00.errormessage = "Email is required.";
+MainContent_ctl00.display = "Dynamic";
+MainContent_ctl00.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_ctl00.initialvalue = "";
+var MainContent_ctl01 = document.all ? document.all["MainContent_ctl01"] : document.getElementById("MainContent_ctl01");
+MainContent_ctl01.controltovalidate = "MainContent_txtPassword";
+MainContent_ctl01.errormessage = "Password is required.";
+MainContent_ctl01.display = "Dynamic";
+MainContent_ctl01.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_ctl01.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+    <!-- jQuery (local) -->
+    <script src="/Scripts/jquery.min.js"></script>
+    <!-- Bootstrap 5 JS bundle (local) -->
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/Scripts/custom.js"></script>
+
+    
+</body>
+</html>
+

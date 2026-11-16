@@ -1,0 +1,235 @@
+/* ============================================================
+   Island Escape Adventures - Custom Styles
+   ============================================================ */
+
+:root {
+    --iea-ocean: #006d77;
+    --iea-lagoon: #0a9396;
+    --iea-reef: #ee6c4d;
+    --iea-sun: #ffb703;
+    --iea-sand: #f4ead2;
+    --iea-palm: #386641;
+    --iea-ink: #17323a;
+}
+
+body {
+    min-width: 320px;
+    color: var(--iea-ink);
+    background-color: #fffdf8;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: var(--iea-ocean);
+}
+
+.navbar.bg-primary {
+    background-color: var(--iea-ocean) !important;
+}
+
+.navbar-brand {
+    letter-spacing: 0;
+}
+
+.btn {
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.btn-primary,
+.btn-success {
+    background-color: var(--iea-ocean);
+    border-color: var(--iea-ocean);
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+    background-color: #07545d;
+    border-color: #07545d;
+}
+
+.btn-warning {
+    background-color: var(--iea-sun);
+    border-color: var(--iea-sun);
+    color: #1f2d2f;
+}
+
+.btn-outline-primary {
+    border-color: var(--iea-ocean);
+    color: var(--iea-ocean);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--iea-ocean);
+    border-color: var(--iea-ocean);
+}
+
+.hero-section {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(0, 69, 77, 0.88), rgba(0, 109, 119, 0.34)),
+        url("../images/hero-lagoon.jpg") center/cover no-repeat;
+    padding: 72px 0;
+}
+
+.hero-section h1 {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+.hero-section .lead {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card,
+.auth-card,
+.stat-card {
+    border-radius: 8px;
+}
+
+.package-card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(0, 109, 119, 0.08);
+    box-shadow: 0 3px 14px rgba(23, 50, 58, 0.08);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(23, 50, 58, 0.14);
+}
+
+.package-card img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+
+.category-badge,
+.badge.bg-primary {
+    background-color: var(--iea-lagoon) !important;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.price-tag {
+    color: var(--iea-reef);
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.section-title {
+    margin-bottom: 28px;
+    padding-bottom: 10px;
+    color: var(--iea-ink);
+    font-weight: 800;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 56px;
+    height: 3px;
+    background-color: var(--iea-reef);
+}
+
+.section-title.text-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bg-light {
+    background-color: var(--iea-sand) !important;
+}
+
+.filter-pills .btn {
+    margin: 3px;
+    border-radius: 999px;
+}
+
+.cart-qty-input {
+    width: 76px;
+    text-align: center;
+}
+
+.table-responsive {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.table-dark {
+    --bs-table-bg: var(--iea-ocean);
+}
+
+.auth-card {
+    max-width: 480px;
+    margin: 56px auto;
+    border: 1px solid rgba(0, 109, 119, 0.08);
+    box-shadow: 0 6px 24px rgba(23, 50, 58, 0.12);
+}
+
+.stat-card {
+    border: 1px solid rgba(0, 109, 119, 0.08);
+    box-shadow: 0 3px 14px rgba(23, 50, 58, 0.08);
+}
+
+.stat-card .stat-icon,
+.category-symbol {
+    color: var(--iea-reef);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.validation-summary-errors ul {
+    margin-bottom: 0;
+}
+
+footer.bg-dark {
+    background-color: #17323a !important;
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        min-height: 360px;
+        padding: 56px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.1rem;
+    }
+
+    .package-card img {
+        height: 185px;
+    }
+}
+
+@media print {
+    .navbar,
+    footer,
+    .btn,
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        font-size: 12pt;
+    }
+
+    .container {
+        max-width: 100%;
+        width: 100%;
+    }
+}

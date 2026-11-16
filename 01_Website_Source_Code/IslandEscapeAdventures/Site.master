@@ -1,0 +1,49 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+<%@ Register Src="~/Controls/NavMenu.ascx" TagPrefix="uc" TagName="NavMenu" %>
+<%@ Register Src="~/Controls/Footer.ascx" TagPrefix="uc" TagName="Footer" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Island Escape Adventures</title>
+
+    <!-- Bootstrap 5 (local) -->
+    <link href="~/Content/bootstrap.min.css" runat="server" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="~/Content/styles.css" runat="server" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <form id="frmMain" runat="server">
+
+        <!-- Navigation -->
+        <uc:NavMenu ID="navMenu" runat="server" />
+
+        <!-- Flash messages (set via Session) -->
+        <asp:Panel ID="pnlFlash" runat="server" Visible="false" CssClass="container mt-3">
+            <asp:Label ID="lblFlash" runat="server" CssClass="alert d-block" />
+        </asp:Panel>
+
+        <!-- Page content -->
+        <main>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+
+        <!-- Footer -->
+        <uc:Footer ID="footer" runat="server" />
+
+    </form>
+
+    <!-- jQuery (local) -->
+    <script src="<%=ResolveUrl("~/Scripts/jquery.min.js") %>"></script>
+    <!-- Bootstrap 5 JS bundle (local) -->
+    <script src="<%=ResolveUrl("~/Scripts/bootstrap.bundle.min.js") %>"></script>
+    <!-- Custom JS -->
+    <script src="<%=ResolveUrl("~/Scripts/custom.js") %>"></script>
+
+    <asp:ContentPlaceHolder ID="ScriptsContent" runat="server" />
+</body>
+</html>

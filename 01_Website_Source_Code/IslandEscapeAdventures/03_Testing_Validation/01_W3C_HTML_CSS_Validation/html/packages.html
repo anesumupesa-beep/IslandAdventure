@@ -1,0 +1,370 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>
+	All Packages
+</title>
+
+    <!-- Bootstrap 5 (local) -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="Content/styles.css" rel="stylesheet" /></head>
+<body>
+    <form method="post" action="./Packages.aspx" id="frmMain">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="[redacted]" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="[redacted]" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="[redacted]" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmMain'];
+if (!theForm) {
+    theForm = document.frmMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="[redacted]" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="[redacted]" />
+</div>
+
+        <!-- Navigation -->
+        
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a href="Default.aspx" class="navbar-brand fw-bold">
+            Island Escape Adventures
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a href="Default.aspx" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="Packages.aspx" class="nav-link">Packages</a></li>
+                <li class="nav-item"><a href="Contact.aspx" class="nav-link">Contact</a></li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item me-2">
+                    <a href="Cart.aspx" class="nav-link position-relative">
+                        Cart
+                        
+                    </a>
+                </li>
+
+                
+                    <li class="nav-item"><a href="Login.aspx" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="Register.aspx" class="btn btn-warning btn-sm ms-2">Register</a></li>
+                
+
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+        <!-- Flash messages (set via Session) -->
+        
+
+        <!-- Page content -->
+        <main>
+            
+<div class="container py-5">
+
+    <h2 class="section-title">All Packages</h2>
+
+    <!-- Category filter -->
+    <div class="filter-pills mb-4">
+        <a id="MainContent_lbtnAll" class="btn btn-outline-primary btn-sm" href="javascript:__doPostBack(&#39;ctl00$MainContent$lbtnAll&#39;,&#39;&#39;)">All</a>
+        <a id="MainContent_lbtnHotels" class="btn btn-outline-primary btn-sm" href="javascript:__doPostBack(&#39;ctl00$MainContent$lbtnHotels&#39;,&#39;&#39;)">HOT Hotels</a>
+        <a id="MainContent_lbtnDining" class="btn btn-outline-primary btn-sm" href="javascript:__doPostBack(&#39;ctl00$MainContent$lbtnDining&#39;,&#39;&#39;)">DIN Dining</a>
+        <a id="MainContent_lbtnTransfer" class="btn btn-outline-primary btn-sm" href="javascript:__doPostBack(&#39;ctl00$MainContent$lbtnTransfer&#39;,&#39;&#39;)">TRN Transfers</a>
+        <a id="MainContent_lbtnExcursions" class="btn btn-outline-primary btn-sm" href="javascript:__doPostBack(&#39;ctl00$MainContent$lbtnExcursions&#39;,&#39;&#39;)">EXP Excursions</a>
+        <a id="MainContent_lbtnSea" class="btn btn-outline-primary btn-sm" href="javascript:__doPostBack(&#39;ctl00$MainContent$lbtnSea&#39;,&#39;&#39;)">SEA Sea Activities</a>
+    </div>
+
+    <!-- Package grid -->
+    <div class="row g-4">
+            <div class="col-sm-6 col-lg-4">
+                <div class="card package-card">
+                    <img src='images/packages/transfer-private.jpg'
+                         onerror="this.src='images/packages/default-package.jpg'"
+                         alt='Private Airport Transfer (up to 4 pax)' class="card-img-top" />
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary category-badge mb-2">Airport Transfer</span>
+                        <h3 class="card-title h5">Private Airport Transfer (up to 4 pax)</h3>
+                        <p class="card-text text-muted small flex-grow-1">
+                            Travel in comfort from Sir Seewoosagur Ramgoolam International Airport to your hotel in an air-conditioned pri...
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="price-tag">Rs 1,200.00</span>
+                            <a href='PackageDetail.aspx?id=5' class="btn btn-outline-primary btn-sm">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4">
+                <div class="card package-card">
+                    <img src='images/packages/transfer-shuttle.jpg'
+                         onerror="this.src='images/packages/default-package.jpg'"
+                         alt='Shared Shuttle - Airport to Grand Baie' class="card-img-top" />
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary category-badge mb-2">Airport Transfer</span>
+                        <h3 class="card-title h5">Shared Shuttle - Airport to Grand Baie</h3>
+                        <p class="card-text text-muted small flex-grow-1">
+                            Affordable shared shuttle service from the airport directly to Grand Baie. Runs on schedule, comfortable minib...
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="price-tag">Rs 450.00</span>
+                            <a href='PackageDetail.aspx?id=6' class="btn btn-outline-primary btn-sm">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4">
+                <div class="card package-card">
+                    <img src='images/packages/dining-creole.jpg'
+                         onerror="this.src='images/packages/default-package.jpg'"
+                         alt='Creole Night Experience' class="card-img-top" />
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary category-badge mb-2">Dining</span>
+                        <h3 class="card-title h5">Creole Night Experience</h3>
+                        <p class="card-text text-muted small flex-grow-1">
+                            Immerse yourself in authentic Mauritian culture with a traditional Creole dinner and live sega music performan...
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="price-tag">Rs 1,500.00</span>
+                            <a href='PackageDetail.aspx?id=4' class="btn btn-outline-primary btn-sm">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4">
+                <div class="card package-card">
+                    <img src='images/packages/dining-sunset.jpg'
+                         onerror="this.src='images/packages/default-package.jpg'"
+                         alt='Sunset Terrace - 3-Course Dinner for 2' class="card-img-top" />
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary category-badge mb-2">Dining</span>
+                        <h3 class="card-title h5">Sunset Terrace - 3-Course Dinner for 2</h3>
+                        <p class="card-text text-muted small flex-grow-1">
+                            Experience fine dining at Sunset Terrace restaurant with breathtaking views of the Indian Ocean. Your 3-course...
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="price-tag">Rs 2,800.00</span>
+                            <a href='PackageDetail.aspx?id=3' class="btn btn-outline-primary btn-sm">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4">
+                <div class="card package-card">
+                    <img src='images/packages/excursion-hiking.jpg'
+                         onerror="this.src='images/packages/default-package.jpg'"
+                         alt='Black River Gorges Hiking Experience' class="card-img-top" />
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary category-badge mb-2">Excursions</span>
+                        <h3 class="card-title h5">Black River Gorges Hiking Experience</h3>
+                        <p class="card-text text-muted small flex-grow-1">
+                            Explore Mauritius' largest national park on a guided full-day hike through lush rainforest. Spot rare endemic ...
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="price-tag">Rs 950.00</span>
+                            <a href='PackageDetail.aspx?id=8' class="btn btn-outline-primary btn-sm">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4">
+                <div class="card package-card">
+                    <img src='images/packages/excursion-chamarel.jpg'
+                         onerror="this.src='images/packages/default-package.jpg'"
+                         alt='Chamarel 7 Coloured Earth & Waterfall Tour' class="card-img-top" />
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary category-badge mb-2">Excursions</span>
+                        <h3 class="card-title h5">Chamarel 7 Coloured Earth & Waterfall Tour</h3>
+                        <p class="card-text text-muted small flex-grow-1">
+                            Discover the magical Chamarel coloured earth and the stunning 100m waterfall. Your guided full-day tour includ...
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="price-tag">Rs 1,800.00</span>
+                            <a href='PackageDetail.aspx?id=7' class="btn btn-outline-primary btn-sm">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4">
+                <div class="card package-card">
+                    <img src='images/packages/hotel-lemorne.jpg'
+                         onerror="this.src='images/packages/default-package.jpg'"
+                         alt='Le Morne Beach Resort' class="card-img-top" />
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary category-badge mb-2">Hotels</span>
+                        <h3 class="card-title h5">Le Morne Beach Resort</h3>
+                        <p class="card-text text-muted small flex-grow-1">
+                            Indulge in luxury at our sea-view rooms overlooking the stunning Le Morne peninsula. Includes daily breakfast,...
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="price-tag">Rs 8,500.00</span>
+                            <a href='PackageDetail.aspx?id=1' class="btn btn-outline-primary btn-sm">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4">
+                <div class="card package-card">
+                    <img src='images/packages/hotel-tamarin.jpg'
+                         onerror="this.src='images/packages/default-package.jpg'"
+                         alt='Tamarin Bay Boutique Hotel' class="card-img-top" />
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary category-badge mb-2">Hotels</span>
+                        <h3 class="card-title h5">Tamarin Bay Boutique Hotel</h3>
+                        <p class="card-text text-muted small flex-grow-1">
+                            A charming boutique hotel nestled in the hills above Tamarin Bay. Enjoy garden suites with private terraces, a...
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="price-tag">Rs 4,200.00</span>
+                            <a href='PackageDetail.aspx?id=2' class="btn btn-outline-primary btn-sm">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4">
+                <div class="card package-card">
+                    <img src='images/packages/sea-catamaran.jpg'
+                         onerror="this.src='images/packages/default-package.jpg'"
+                         alt='Catamaran Cruise & Snorkelling - North Coast' class="card-img-top" />
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary category-badge mb-2">Sea Activities</span>
+                        <h3 class="card-title h5">Catamaran Cruise & Snorkelling - North Coast</h3>
+                        <p class="card-text text-muted small flex-grow-1">
+                            Sail the crystal-clear waters of the north coast aboard a luxury catamaran. Enjoy snorkelling at two reef site...
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="price-tag">Rs 2,500.00</span>
+                            <a href='PackageDetail.aspx?id=9' class="btn btn-outline-primary btn-sm">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4">
+                <div class="card package-card">
+                    <img src='images/packages/sea-dolphins.jpg'
+                         onerror="this.src='images/packages/default-package.jpg'"
+                         alt='Dolphin Watching & Swimming - Tamarin Bay' class="card-img-top" />
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary category-badge mb-2">Sea Activities</span>
+                        <h3 class="card-title h5">Dolphin Watching & Swimming - Tamarin Bay</h3>
+                        <p class="card-text text-muted small flex-grow-1">
+                            An unforgettable sunrise experience swimming with wild dolphins in Tamarin Bay. Includes boat trip, snorkellin...
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="price-tag">Rs 1,750.00</span>
+                            <a href='PackageDetail.aspx?id=10' class="btn btn-outline-primary btn-sm">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Empty state -->
+    
+
+</div>
+
+        </main>
+
+        <!-- Footer -->
+        
+
+<footer class="bg-dark text-white mt-5 py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="fw-bold h5">Island Escape Adventures</div>
+                <p class="text-muted small">Your gateway to unforgettable Mauritius experiences. Hotels, dining, excursions and more - all in one place.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="fw-bold h6">Quick Links</div>
+                <ul class="list-unstyled small">
+                    <li><a href="Default.aspx" class="text-muted text-decoration-none">Home</a></li>
+                    <li><a href="Packages.aspx" class="text-muted text-decoration-none">Packages</a></li>
+                    <li><a href="Contact.aspx" class="text-muted text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="fw-bold h6">Contact</div>
+                <p class="text-muted small">
+                    Port Louis, Mauritius<br />
+                    +230 5900 1234<br />
+                    info@islandescape.mu
+                </p>
+            </div>
+        </div>
+        <hr class="border-secondary" />
+        <p class="text-center text-muted small mb-0">
+            &copy; 2026 Island Escape Adventures. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+
+    </form>
+
+    <!-- jQuery (local) -->
+    <script src="/Scripts/jquery.min.js"></script>
+    <!-- Bootstrap 5 JS bundle (local) -->
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/Scripts/custom.js"></script>
+
+    
+</body>
+</html>
+
